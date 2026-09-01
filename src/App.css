@@ -612,3 +612,61 @@ button {
   align-items: center;
   gap: 10px;
 }
+/* ===== VISIBILIDAD DEL DIAGNÓSTICO ===== */
+
+.diagnostic-page h1,
+.diagnostic-page h2,
+.diagnostic-page h3 {
+  color: #111827 !important;
+}
+
+.diagnostic-page p {
+  color: #374151 !important;
+}
+
+.diagnostic-page button {
+  color: #172033;
+}
+
+.diagnostic-page .primary-button {
+  color: #ffffff !important;
+  background: #172033 !important;
+}
+/* ===== OPCIONES DEL DIAGNÓSTICO ===== */
+
+.diagnostic-page .answer-button,
+.diagnostic-page .option-button {
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  margin: 10px 0;
+  background: #ffffff !important;
+  color: #172033 !important;
+  border: 1px solid #d7dce6 !important;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.diagnostic-page .answer-button:hover,
+.diagnostic-page .option-button:hover {
+  background: #eef2ff !important;
+  border-color: #6366f1 !important;
+}
+/* ===== DIAGNÓSTICO DE MATEMÁTICA ===== */
+
+.question-container h1 {
+  color: #111827 !important;
+}
+
+.question-progress {
+  color: #374151 !important;
+}
+
+.question-container .answer-grid button {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border: 1px solid #d7dce6 !important;
+  border-radius: 12px;
+  padding: 14px 20px;
+  cursor: pointer;
+}
