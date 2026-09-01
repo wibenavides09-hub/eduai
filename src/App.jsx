@@ -667,9 +667,32 @@ const temaPrioritario =
   } else if (porcentaje >= 60) {
     nivel = 'Intermedio'
   }
-  return (
+ return (
   <>
   <main className="diagnostic-page">
+
+    <header className="navbar">
+      <div className="brand">
+        🏠 EDUAI
+      </div>
+
+      <div className="navbar-actions">
+        <button
+          className="login-button"
+          onClick={volverInicio}
+        >
+          🏠 Inicio
+        </button>
+
+        <button
+          className="login-button"
+          onClick={() => setPantalla('mate-diagnostico')}
+        >
+          ← Volver
+        </button>
+      </div>
+    </header>
+
     <section className="result-container">
 
   <div className="result-header">
@@ -1344,7 +1367,7 @@ const respaldoActual =
   leccionesRespaldo[temaRuta] || leccionesRespaldo['Geometría']
   return (
     <main className="diagnostic-page">
-      <header className="navbar">
+     <header className="navbar">
   <div className="brand">
     🏠 EDUAI
   </div>
@@ -1830,13 +1853,24 @@ if (pantalla === 'leccion-ingles') {
 </header>
 
       <section className="result-container">
-        <div className="result-header">
-          <span className="result-badge">Lección</span>
+       <div className="result-header">
+  <span className="result-badge">
+    📘 Lección
+  </span>
 
-          <h1>{leccionActual.titulo}</h1>
+  <h1>
+    Lección de {leccionActual.titulo}
+  </h1>
 
-          <p>{leccionActual.explicacion}</p>
-        </div>
+  <p>
+    Aprende los conceptos principales y revisa los ejemplos antes de comenzar la práctica.
+  </p>
+</div>
+
+<div className="lesson-box">
+  <h3>📖 Explicación</h3>
+  <p>{leccionActual.explicacion}</p>
+</div>
 
         <div className="geometry-review">
           {leccionActual.ejemplos.map((ejemplo, index) => (
@@ -2721,13 +2755,24 @@ if (pantalla === 'leccion-comunicacion') {
 </header>
 
       <section className="result-container">
-        <div className="result-header">
-          <span className="result-badge">Lección</span>
+       <div className="result-header">
+  <span className="result-badge">
+    📘 Lección
+  </span>
 
-          <h1>{leccionActualComunicacion.titulo}</h1>
+  <h1>
+    Lección de {leccionActualComunicacion.titulo}
+  </h1>
 
-          <p>{leccionActualComunicacion.explicacion}</p>
-        </div>
+  <p>
+    Aprende los conceptos principales y revisa los ejemplos antes de comenzar la práctica.
+  </p>
+</div>
+
+<div className="lesson-box">
+  <h3>📖 Explicación</h3>
+  <p>{leccionActualComunicacion.explicacion}</p>
+</div>
 
         <div className="geometry-review">
           {leccionActualComunicacion.ejemplos.map((ejemplo, index) => (
@@ -3596,13 +3641,24 @@ if (pantalla === 'leccion-ciencias') {
 </header>
 
       <section className="result-container">
-        <div className="result-header">
-          <span className="result-badge">Lección</span>
+       <div className="result-header">
+  <span className="result-badge">
+    📘 Lección
+  </span>
 
-          <h1>{leccionActualCiencias.titulo}</h1>
+  <h1>
+    Lección de {leccionActualCiencias.titulo}
+  </h1>
 
-          <p>{leccionActualCiencias.explicacion}</p>
-        </div>
+  <p>
+    Aprende los conceptos principales y revisa los ejemplos antes de comenzar la práctica.
+  </p>
+</div>
+
+<div className="lesson-box">
+  <h3>📖 Explicación</h3>
+  <p>{leccionActualCiencias.explicacion}</p>
+</div>
 
         <div className="geometry-review">
           {leccionActualCiencias.ejemplos.map((ejemplo, index) => (
@@ -4507,13 +4563,24 @@ if (pantalla === 'leccion-historia') {
 </header>
 
       <section className="result-container">
-        <div className="result-header">
-          <span className="result-badge">Lección</span>
+      <div className="result-header">
+  <span className="result-badge">
+    📘 Lección
+  </span>
 
-          <h1>{leccionActualHistoria.titulo}</h1>
+  <h1>
+    Lección de {leccionActualHistoria.titulo}
+  </h1>
 
-          <p>{leccionActualHistoria.explicacion}</p>
-        </div>
+  <p>
+    Aprende los conceptos principales y revisa los ejemplos antes de comenzar la práctica.
+  </p>
+</div>
+
+<div className="lesson-box">
+  <h3>📖 Explicación</h3>
+  <p>{leccionActualHistoria.explicacion}</p>
+</div>
 
         <div className="geometry-review">
           {leccionActualHistoria.ejemplos.map((ejemplo, index) => (
@@ -5415,13 +5482,24 @@ if (pantalla === 'leccion-geografia') {
 </header>
 
       <section className="result-container">
-        <div className="result-header">
-          <span className="result-badge">Lección</span>
+       <div className="result-header">
+  <span className="result-badge">
+    📘 Lección
+  </span>
 
-          <h1>{leccionActualGeografia.titulo}</h1>
+  <h1>
+    Lección de {leccionActualGeografia.titulo}
+  </h1>
 
-          <p>{leccionActualGeografia.explicacion}</p>
-        </div>
+  <p>
+    Aprende los conceptos principales y revisa los ejemplos antes de comenzar la práctica.
+  </p>
+</div>
+
+<div className="lesson-box">
+  <h3>📖 Explicación</h3>
+  <p>{leccionActualGeografia.explicacion}</p>
+</div>
 
         <div className="geometry-review">
           {leccionActualGeografia.ejemplos.map((ejemplo, index) => (
@@ -6330,13 +6408,24 @@ if (pantalla === 'leccion-dpsc') {
 </header>
 
       <section className="result-container">
-        <div className="result-header">
-          <span className="result-badge">Lección</span>
+       <div className="result-header">
+  <span className="result-badge">
+    📘 Lección
+  </span>
 
-          <h1>{leccionActualDPSC.titulo}</h1>
+  <h1>
+    Lección de {leccionActualDPSC.titulo}
+  </h1>
 
-          <p>{leccionActualDPSC.explicacion}</p>
-        </div>
+  <p>
+    Aprende los conceptos principales y revisa los ejemplos antes de comenzar la práctica.
+  </p>
+</div>
+
+<div className="lesson-box">
+  <h3>📖 Explicación</h3>
+  <p>{leccionActualDPSC.explicacion}</p>
+</div>
 
         <div className="geometry-review">
           {leccionActualDPSC.ejemplos.map((ejemplo, index) => (
@@ -6799,16 +6888,27 @@ if (pantalla === 'resultado-mini-dpsc') {
 if (pantalla === 'ruta-mate') {
   return (
     <main className="diagnostic-page">
-      <header className="navbar">
-        <div className="brand">EDUAI</div>
+     <header className="navbar">
+  <div className="brand">
+    🏠 EDUAI
+  </div>
 
-        <button
-          className="login-button"
-          onClick={() => setPantalla('resultado-mate')}
-        >
-          Volver
-        </button>
-      </header>
+  <div className="navbar-actions">
+    <button
+      className="login-button"
+      onClick={volverInicio}
+    >
+      🏠 Inicio
+    </button>
+
+    <button
+      className="login-button"
+      onClick={() => setPantalla('resultado-mate')}
+    >
+      ← Volver
+    </button>
+  </div>
+</header>
 
       <section className="result-container">
         <div className="result-header">
