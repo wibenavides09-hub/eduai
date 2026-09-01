@@ -670,3 +670,23 @@ button {
   padding: 14px 20px;
   cursor: pointer;
 }
+/* ===== VISIBILIDAD PANTALLA PRINCIPAL ===== */
+
+.home h2,
+.home h3,
+.home .course-grid article {
+  color: #172033 !important;
+  opacity: 1 !important;
+}
+
+.home .secondary-button {
+  color: #172033 !important;
+  background: #ffffff !important;
+  border: 1px solid #b8c0cc !important;
+  opacity: 1 !important;
+}
+
+.home .small-title {
+  color: #596174 !important;
+  opacity: 1 !important;
+}
