@@ -83,6 +83,7 @@ button {
   line-height: 1.08;
   margin: 0 0 22px;
   letter-spacing: -2px;
+  color: #172033;
 }
 
 .hero-text p {
@@ -293,6 +294,7 @@ button {
   border: 1px solid #e5e7eb;
   border-radius: 18px;
   background: white;
+  color: #172033;
   cursor: pointer;
 
   display: flex;
