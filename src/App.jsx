@@ -483,7 +483,7 @@ const generarLeccionIA = async () => {
       }
 
       const respuesta = await fetch(
-        'http://localhost:3001/api/leccion',
+        'https://eduai-lgp2.onrender.com/',
         {
           method: 'POST',
           headers: {
