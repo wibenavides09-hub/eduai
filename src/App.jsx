@@ -7168,7 +7168,7 @@ if (pantalla === 'diagnostico-ingles') {
           <strong>Temas que evaluaremos</strong>
 
           {temasIngles.map((tema) => (
-            <p key={tema}>🇬🇧 {tema}</p>
+            <p key={tema}>📘 {tema}</p>
           ))}
         </div>
 
