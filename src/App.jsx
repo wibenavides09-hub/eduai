@@ -483,7 +483,7 @@ const generarLeccionIA = async () => {
       }
 
       const respuesta = await fetch(
-        'https://eduai-lgp2.onrender.com/api/recomendacion',
+        'https://eduai-lgp2.onrender.com/api/leccion',
         {
           method: 'POST',
           headers: {
@@ -564,7 +564,7 @@ useEffect(() => {
       setRecomendacionIA('')
 
       const respuesta = await fetch(
-        'https://eduai-lgp2.onrender.com/api/leccion',
+        'https://eduai-lgp2.onrender.com/api/recomendacion',
         {
           method: 'POST',
           headers: {
