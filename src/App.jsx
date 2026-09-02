@@ -755,7 +755,7 @@ const temaPrioritario =
 {recomendacionIA && (
   <div className="ai-recommendation">
     <strong>🤖 Recomendación de IA</strong>
-    <p>{recomendacionIA}</p>
+    <p>{recomendacionIA.replace(/\*\*/g, '')}</p>
   </div>
 )}
   {temaPrioritario ? (
@@ -1412,9 +1412,9 @@ const respaldoActual =
           <div className="lesson-box">
             <h3>🤖 Explicación personalizada</h3>
 
-            <p style={{ whiteSpace: 'pre-line' }}>
-              {leccionIA}
-            </p>
+           <p style={{ whiteSpace: 'pre-line' }}>
+  {leccionIA.replace(/\*\*/g, '')}
+</p>
           </div>
         ) : (
          <div className="lesson-box">
