@@ -564,7 +564,7 @@ useEffect(() => {
       setRecomendacionIA('')
 
       const respuesta = await fetch(
-        'http://localhost:3001/api/recomendacion',
+        'https://eduai-lgp2.onrender.com/',
         {
           method: 'POST',
           headers: {
