@@ -3227,9 +3227,25 @@ if (pantalla === 'ciencias-diagnostico') {
 
   return (
     <main className="diagnostic-page">
-      <header className="navbar">
-        <div className="brand">EDUAI</div>
-      </header>
+     <header className="navbar">
+  <div className="brand">🏠 EDUAI</div>
+
+  <div className="navbar-actions">
+    <button
+      className="login-button"
+      onClick={volverInicio}
+    >
+      🏠 Inicio
+    </button>
+
+    <button
+      className="login-button"
+      onClick={() => setPantalla('diagnostico')}
+    >
+      ← Volver
+    </button>
+  </div>
+</header>
 
       <section className="diagnostic-container">
         <div className="diagnostic-header">
@@ -7312,11 +7328,17 @@ if (pantalla === 'resultado-ingles') {
               <small>Iniciar diagnóstico</small>
             </button>
 
-            <button className="diagnostic-card">
-              <span>📖</span>
-              <strong>Comunicación</strong>
-              <small>Próximamente</small>
-            </button>
+           <button
+  className="diagnostic-card"
+  onClick={() => {
+    setCursoActual('Comunicación')
+    setPantalla('comunicacion-diagnostico')
+  }}
+>
+  <span>📖</span>
+  <strong>Comunicación</strong>
+  <small>Iniciar diagnóstico</small>
+</button>
 
            <button
   className="diagnostic-card"
@@ -7330,29 +7352,53 @@ if (pantalla === 'resultado-ingles') {
   <small>Iniciar diagnóstico</small>
 </button>
 
-            <button className="diagnostic-card">
-              <span>🔬</span>
-              <strong>Ciencias</strong>
-              <small>Próximamente</small>
-            </button>
+           <button
+  className="diagnostic-card"
+  onClick={() => {
+    setCursoActual('Ciencias')
+    setPantalla('ciencias-diagnostico')
+  }}
+>
+  <span>🔬</span>
+  <strong>Ciencias</strong>
+  <small>Iniciar diagnóstico</small>
+</button>
 
-            <button className="diagnostic-card">
-              <span>🏛️</span>
-              <strong>Historia</strong>
-              <small>Próximamente</small>
-            </button>
+           <button
+  className="diagnostic-card"
+  onClick={() => {
+    setCursoActual('Historia')
+    setPantalla('historia-diagnostico')
+  }}
+>
+  <span>🏛️</span>
+  <strong>Historia</strong>
+  <small>Iniciar diagnóstico</small>
+</button>
 
-            <button className="diagnostic-card">
-              <span>🌎</span>
-              <strong>Geografía</strong>
-              <small>Próximamente</small>
-            </button>
+           <button
+  className="diagnostic-card"
+  onClick={() => {
+    setCursoActual('Geografía')
+    setPantalla('geografia-diagnostico')
+  }}
+>
+  <span>🌎</span>
+  <strong>Geografía</strong>
+  <small>Iniciar diagnóstico</small>
+</button>
 
-            <button className="diagnostic-card">
-              <span>🤝</span>
-              <strong>DPSC</strong>
-              <small>Próximamente</small>
-            </button>
+            <button
+  className="diagnostic-card"
+  onClick={() => {
+    setCursoActual('DPSC')
+    setPantalla('dpsc-diagnostico')
+  }}
+>
+  <span>🤝</span>
+  <strong>DPSC</strong>
+  <small>Iniciar diagnóstico</small>
+</button>
           </div>
         </section>
       </main>
