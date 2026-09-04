@@ -656,6 +656,12 @@ button {
 
 .question-container h1 {
   color: #111827 !important;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.2;
+  max-width: 900px;
+  margin: 20px auto 30px;
+  height: auto;
+  overflow-wrap: break-word;
 }
 
 .question-progress {

@@ -419,6 +419,7 @@ const [temasDominados, setTemasDominados] = useState([])
 const [temasDominadosIngles, setTemasDominadosIngles] = useState([])
 const [temasDominadosComunicacion, setTemasDominadosComunicacion] = useState([])
 const [temasDominadosCiencias, setTemasDominadosCiencias] = useState([])
+const [valoracion, setValoracion] = useState(0)
 const [temasDominadosHistoria, setTemasDominadosHistoria] = useState([])
 const [resultadosHistoria, setResultadosHistoria] = useState([])
 const [temasDominadosGeografia, setTemasDominadosGeografia] = useState([])
@@ -454,9 +455,9 @@ const generarLeccionIA = async () => {
         (resultado) => resultado.acerto
       ).length
 
-      const porcentajeLeccion = Math.round(
-        (aciertosLeccion / resultadosMate.length) * 100
-      )
+      const porcentajeLeccion = resultadosMate.length > 0
+  ? Math.round((aciertosLeccion / resultadosMate.length) * 100)
+  : 0
 
       const fortalezasLeccion = [
         ...new Set(
@@ -505,7 +506,6 @@ const generarLeccionIA = async () => {
       }
 
       setLeccionIA(datos.leccion)
-      setPantalla('leccion-tema')
     } catch (error) {
   console.error('ERROR LECCIÓN:', error)
 
@@ -513,7 +513,6 @@ const generarLeccionIA = async () => {
     'Usaremos una lección de respaldo mientras la IA vuelve a estar disponible.'
   )
 
-  setPantalla('leccion-tema')
 } finally {
       setCargandoLeccion(false)
     }
@@ -1145,7 +1144,31 @@ if (pantalla === 'resultado-mini') {
             </>
           )}
         </div>
+<div className="feedback-box">
+  <h3>¿Qué te pareció EDUAI?</h3>
+  <p>Califica tu experiencia:</p>
 
+  <div className="feedback-stars">
+    {[1, 2, 3, 4, 5].map((estrella) => (
+      <button
+        key={estrella}
+        onClick={() => setValoracion(estrella)}
+        style={{
+          fontSize: '30px',
+          background: 'none',
+          border: 'none',
+          cursor: 'pointer'
+        }}
+      >
+        {estrella <= valoracion ? '⭐' : '☆'}
+      </button>
+    ))}
+  </div>
+
+  {valoracion > 0 && (
+    <p>¡Gracias por tu valoración!</p>
+  )}
+</div>
         <div className="lesson-actions">
           {!temaDominado && (
             <button
